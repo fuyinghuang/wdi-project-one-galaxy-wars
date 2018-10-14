@@ -1,7 +1,10 @@
+body{
+  background-color: black;
+}
 h1{
   text-align: center;
   font-family: 'Space Mono', monospace;
-
+  color: white;
 }
 
 
