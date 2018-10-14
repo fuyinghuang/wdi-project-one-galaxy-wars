@@ -1,10 +1,13 @@
 body{
-  background-color: black;
+  background-color: #B5E888;
 }
 h1{
   text-align: center;
-  font-family: 'Space Mono', monospace;
-  color: white;
+  font-family: 'Indie Flower', cursive;
+  color: #E8712F;
+  font-weight: bold;
+  font-size: 55px;
+  letter-spacing: 9px;
 }
 
 
@@ -51,6 +54,7 @@ button {
   padding: 8px 10px;
   font-size: 14px;
   border-radius: 4px;
-  cursor: pointer;
-  outline: none;
+  /* cursor: pointer;
+  outline: none; */
+  margin-top:20px;
 }

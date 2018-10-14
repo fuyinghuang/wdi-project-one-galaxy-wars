@@ -5,7 +5,6 @@ const pink = document.getElementById('pink');
 const purple = document.getElementById('purple');
 const circle = document.getElementsByClassName('circle');
 
-
 const round = 1;
 let block = 0;
 const computerSequence = [];
@@ -24,8 +23,11 @@ const clickedOn = function() {
   console.log('the blcok is', block);
 };
 
-for (var i = 0; i < circle.length; i++) {
+for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
+  console.log('circle clicked');
+  const clicked = circle[i].addEventListener('click', clickedOn);
+
 }
 
 
@@ -77,8 +79,6 @@ function playerClick(circle) {
   circle[i].addEventListener('click', clickedOn);
 
 }
-// playerSequence.push('happy');
-// console.log(playerSequence);
 
 //compare computerSequenceand playSequence
 //   for (var i = 0; i === round; i++) {
@@ -94,17 +94,17 @@ function playerClick(circle) {
 //
 //   round ++;
 // }
-
+// if the same, secound round
 
 // const gameId = setInterval(function() {
 //   startButton();
 // }, 3000);
 
+// if not, game over
 // function restGame() {
 //   clearInterval(gameId);
 //   alert('Finshed. Play Again?');
 // }
-
 
 
 
