@@ -5,107 +5,140 @@ const pink = document.getElementById('pink');
 const purple = document.getElementById('purple');
 const circle = document.getElementsByClassName('circle');
 
-const round = 1;
+let round = 1;
 let block = 0;
 const computerSequence = [];
-const playerSequence = [];
-//let soundBoard = [];
+// let computerSequence = ['grey', 'grey'];
+console.log(computerSequence);
+let playerSequence = [];
 
-//start the game
+// start the game
 function startButton() {
-  //console.log('hello');
+  console.log('startButton');
   randomCircle();
   lightCircle();
+  // computerSequence.forEach(color => lightCircle(color));
+  // lightCircle('blue');
 }
 
 const clickedOn = function() {
-  alert(this.id+' '+block);
-  console.log('the blcok is', block);
+  console.log('clicked');
+  console.log(this.id+' '+block);
+  // alert(this.id);
+  // alert(this.id+' '+block);
+  playerSequence.push(this.id);
+  console.log(playerSequence);
+  compareCircle();
 };
 
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
   console.log('circle clicked');
-  const clicked = circle[i].addEventListener('click', clickedOn);
-
-}
-
-
-//generate random number
-function randomCircle() {
-  //console.log('randomCircle started')
-  block = Math.floor(Math.random() * 4);
-  //console.log(block);
-}
-//computer sequence
-function lightCircle() {
-  //console.log('lightCircle Started')
-  if (block === 0) {
-    blue.style.backgroundColor ='#8cbed647';
-    //console.log('blue');
-    setTimeout(function(){
-      blue.style.backgroundColor ='#8CBED6';}, 1000);
-    computerSequence.push('blue');
-  }
-  if (block === 1) {
-    grey.style.backgroundColor ='#80808061';
-    //console.log('grey');
-    setTimeout(function(){
-      grey.style.backgroundColor ='#808080';}, 1000);
-    computerSequence.push('grey');
-  }
-
-  if (block === 2) {
-    pink.style.backgroundColor ='#de707561';
-    //console.log('pink');
-    setTimeout(function(){
-      pink.style.backgroundColor ='#de7075';}, 1000);
-    computerSequence.push('pink');
-    }
-  if (block === 3) {
-    purple.style.backgroundColor ='#cca2ce59';
-    //console.log('purple');
-    setTimeout(function(){
-      purple.style.backgroundColor ='#cca2ce';}, 1000);
-    computerSequence.push('purple');
-  }
-  //console.log(computerSequence);
-  //console.log('lightblock ended');
-}
-
-// player sequence
-
-function playerClick(circle) {
   circle[i].addEventListener('click', clickedOn);
 
 }
 
-//compare computerSequenceand playSequence
-//   for (var i = 0; i === round; i++) {
-//     randomCircle();
-//     lightCircle();
-//     // startGame();
-//
-//   }
-//   // playerClick();
-//   // for (var j = 0; j === computerSequence.length; j++) {
-//
-//   // }
-//
-//   round ++;
-// }
-// if the same, secound round
 
-// const gameId = setInterval(function() {
+// generate random number
+function randomCircle(round) {
+  console.log('randomCircle started');
+  block = Math.floor(Math.random() * 4);
+  console.log(block);
+}
+
+
+//computer sequence
+// function lightCircle(color) {
+function lightCircle() {
+  console.log('lightCircle Started');
+  // if (color === 'blue') {
+  if (block === 0) {
+    blue.style.backgroundColor ='#8cbed647';
+    console.log('blue');
+    setTimeout(function(){
+      blue.style.backgroundColor ='#8CBED6';
+    }, 1000);
+    computerSequence.push('blue');
+  }
+  // if (color === 'grey') {
+  if (block === 1) {
+    grey.style.backgroundColor ='#80808061';
+    console.log('grey');
+    setTimeout(function(){
+      grey.style.backgroundColor ='#808080';
+    }, 1000);
+    computerSequence.push('grey');
+  }
+  // if (color === 'pink') {
+  if(block === 2) {
+    pink.style.backgroundColor ='#de707561';
+    console.log('pink');
+    setTimeout(function(){
+      pink.style.backgroundColor ='#de7075';
+    }, 1000);
+    computerSequence.push('pink');
+  }
+  // if (color === 'purple') {
+  if (block === 3) {
+    purple.style.backgroundColor ='#cca2ce59';
+    console.log('purple');
+    setTimeout(function(){
+      purple.style.backgroundColor ='#cca2ce';
+    }, 1000);
+    computerSequence.push('purple');
+  }
+  //console.log(computerSequence);
+  //console.log('lightblock ended');
+  // compareCircle();
+}
+
+
+// setInterval(function() {
+// // const gameId = setInterval(function() {
 //   startButton();
 // }, 3000);
 
-// if not, game over
-// function restGame() {
-//   clearInterval(gameId);
-//   alert('Finshed. Play Again?');
+function compareCircle(){
+  if (computerSequence.filter((color,index) => color === playerSequence[index]).length === computerSequence.length ){
+
+    playerSequence = [];
+
+    // add more colors to the computerSequence array
+
+    console.log(computerSequence);
+    round++;
+    console.log('round: ' + round);
+    randomCircle();
+    lightCircle();
+  } else if (playerSequence.length === computerSequence.length){
+    playerSequence = [];
+    console.log('nope!!!');
+    //incorrect answers
+    restGame();
+  }
+}
+
+function restGame(){
+  // clearInterval(gameId);
+  alert('Finshed. Play Again?');
+  startButton();
+}
+
+// for (let i = 0; i === round; i++) {
+//   randomCircle();
+//   lightCircle();
+//   // startButton();
+//
 // }
-
-
-
-//display winner
+// //   // playerClick();
+// //   // for (var j = 0; j === computerSequence.length; j++) {
+// //
+// //   // }
+// //
+// round ++;
+// // if the same, secound round
+//
+// setInterval(function() {
+// // const gameId = setInterval(function() {
+//   startButton();
+// }, 3000);
