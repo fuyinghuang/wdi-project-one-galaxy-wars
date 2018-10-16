@@ -7,19 +7,20 @@ const circle = document.getElementsByClassName('circle');
 
 let round = 1;
 let circleIndex = 0;
-const computerSequence = [];
-// let computerSequence = ['grey', 'grey'];
+let computerSequence = [];
 console.log(computerSequence);
 let playerSequence = [];
+// const isTimerRunning = false;
 
 // start the game
 function startButton() {
+  // if (isTimerRunning === false) {
   console.log('startButton');
   randomCircle();
   computerGenerate();
   lightCircle();
   // computerSequence.forEach(color => lightCircle(color));
-  // lightCircle('blue');
+  // }
 }
 
 const clickedOn = function() {
@@ -35,8 +36,6 @@ const clickedOn = function() {
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
   console.log('circle clicked');
-  circle[i].addEventListener('click', clickedOn);
-
 }
 
 
@@ -135,9 +134,17 @@ function compareCircle(){
 }
 
 function restGame(){
+  // clearInterval();
   // clearInterval(gameId);
-  alert('Finshed. Play Again?');
-  startButton();
+  alert('Finished. Press start to play again!');
+  computerSequence = [];
+  playerSequence = [];
+  round = 0;
+
+  // randomCircle();
+  // computerGenerate();
+  // lightCircle();
+
 }
 
 
