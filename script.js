@@ -27,19 +27,24 @@ function startButton() {
 }
 
 const clickedOn = function() {
+  audio2.pause();
+  audio2.currentTime = 0;
+  audio2.play();
+  
+  // setTimeout(() => {
+  //   blue.style.opacity ='0.5';
+  // }, 100);
   console.log('clicked');
   console.log(this.id+' '+circleIndex);
   playerSequence.push(this.id);
   console.log(playerSequence);
   compareCircle();
-  audio2.play();
 };
 
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
 
   console.log('circle clicked');
-  // audio2.play();
 }
 // soundSquares.forEach(function(square) {
 //   square.addEventListener('click', function() {
