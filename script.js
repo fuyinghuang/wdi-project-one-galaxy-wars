@@ -4,51 +4,57 @@ const grey = document.getElementById('grey');
 const pink = document.getElementById('pink');
 const purple = document.getElementById('purple');
 const circle = document.getElementsByClassName('circle');
+// const sounds = [
+//   { name: 'Pling', file: new Audio('sounds/Pling.wav')}
+// ];
+const audio1 = new Audio('sounds/pling.wav');
+const audio2 = new Audio('sounds/gunshoot.wav');
 
+// global variables
 let round = 1;
 let circleIndex = 0;
 let computerSequence = [];
 console.log(computerSequence);
 let playerSequence = [];
-// const isTimerRunning = false;
 
 // start the game
 function startButton() {
-  // if (isTimerRunning === false) {
   console.log('startButton');
   randomCircle();
   computerGenerate();
   lightCircle();
   // computerSequence.forEach(color => lightCircle(color));
-  // }
 }
 
 const clickedOn = function() {
   console.log('clicked');
   console.log(this.id+' '+circleIndex);
-  // alert(this.id);
-  // alert(this.id+' '+circleIndex);
   playerSequence.push(this.id);
   console.log(playerSequence);
   compareCircle();
+  audio2.play();
 };
 
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
+
   console.log('circle clicked');
+  // audio2.play();
 }
+// soundSquares.forEach(function(square) {
+//   square.addEventListener('click', function() {
+//     square.audio.play();
+// computer sequence
 
 
-// generate random number
+// computer generate random number
 function randomCircle() {
   console.log('randomCircle started');
   circleIndex = Math.floor(Math.random() * 4);
   console.log(circleIndex);
 }
 
-
-//
-// function lightCircle(color) {
+// circle light on
 function lightCircle() {
   console.log('lightCircle Started');
   computerSequence.forEach((color, index) => {
@@ -60,6 +66,7 @@ function lightCircle() {
         console.log('blue', blue);
         setTimeout(() => {
           blue.style.backgroundColor ='#8CBED6';
+          audio1.play();
         }, 500);
       }
       if(color === 'grey') {
@@ -67,6 +74,7 @@ function lightCircle() {
         console.log('grey', grey);
         setTimeout(() => {
           grey.style.backgroundColor ='#808080';
+          audio1.play();
         }, 500);
 
       }
@@ -75,6 +83,7 @@ function lightCircle() {
         console.log('pink', pink);
         setTimeout(() => {
           pink.style.backgroundColor ='#de7075';
+          audio1.play();
         }, 500);
       }
       if(color === 'purple') {
@@ -82,6 +91,7 @@ function lightCircle() {
         console.log('purple', purple);
         setTimeout(() => {
           purple.style.backgroundColor ='#cca2ce';
+          audio1.play();
         }, 500);
       }
     }, time);
@@ -105,20 +115,10 @@ function computerGenerate(){
   console.log(computerSequence);
 }
 
-
-
-// setInterval(function() {
-// // const gameId = setInterval(function() {
-//   startButton();
-// }, 3000);
-
+// compare computer and player sequence
 function compareCircle(){
   if (computerSequence.filter((color,index) => color === playerSequence[index]).length === computerSequence.length ){
-
     playerSequence = [];
-
-    // add more colors to the computerSequence array
-
     console.log(computerSequence);
     round++;
     console.log('round: ' + round);
@@ -128,35 +128,17 @@ function compareCircle(){
   } else if (playerSequence.length === computerSequence.length){
     playerSequence = [];
     console.log('nope!!!');
-    //incorrect answers
     restGame();
   }
 }
 
+// reset game
 function restGame(){
-  // clearInterval();
-  // clearInterval(gameId);
   alert('CACA💩. Press start to play again!');
   computerSequence = [];
+  console.log('computer',computerSequence);
   playerSequence = [];
+  console.log('player',playerSequence);
   round = 0;
-
-  // randomCircle();
-  // computerGenerate();
-  // lightCircle();
-
+  console.log('game over',round);
 }
-
-
-
-//
-// setInterval(function() {
-// // const gameId = setInterval(function() {
-//   startButton();
-// }, 3000);
-// playerClick();
-// //   // for (var j = 0; j === computerSequence.length; j++) {
-// //
-// //   // }
-//  round ++;
-//
