@@ -136,7 +136,7 @@ function compareCircle(){
 function restGame(){
   // clearInterval();
   // clearInterval(gameId);
-  alert('Finished. Press start to play again!');
+  alert('CACA💩. Press start to play again!');
   computerSequence = [];
   playerSequence = [];
   round = 0;
