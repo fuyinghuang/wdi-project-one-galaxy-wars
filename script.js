@@ -1,4 +1,22 @@
 // DOM elements
+
+// // const characterButtons = document.querySelectorAll('.character-button');
+// // characterButtons.forEach(button => {
+// let button = document.getElementsByClassName('enter');
+//
+// button.addEventListener('click', (event) => {
+//   document.querySelector('.intro').style.zIndex = -1;
+//   button = event.target.getAttribute('src');
+//
+//   // console.log('clicked on', character);
+// });
+
+
+
+
+
+
+
 const blue = document.getElementById('blue');
 const grey = document.getElementById('grey');
 const pink = document.getElementById('pink');
@@ -17,6 +35,9 @@ let computerSequence = [];
 console.log(computerSequence);
 let playerSequence = [];
 
+
+
+// function
 // start the game
 function startButton() {
   console.log('startButton');
@@ -30,10 +51,24 @@ const clickedOn = function() {
   audio2.pause();
   audio2.currentTime = 0;
   audio2.play();
-  
+
+  // blue.style.backgroundColor ='#8cbed647';
   // setTimeout(() => {
-  //   blue.style.opacity ='0.5';
+  //   blue.style.backgroundColor ='#8CBED6';
   // }, 100);
+  // // grey.style.backgroundColor ='#80808061';
+  // // setTimeout(() => {
+  // //   grey.style.backgroundColor ='#808080';
+  // // }, 100);
+  // // pink.style.backgroundColor ='#de707561';
+  // // setTimeout(() => {
+  // //   pink.style.backgroundColor ='#de7075';
+  // // }, 100);
+  // // purple.style.backgroundColor ='#cca2ce59';
+  // // setTimeout(() => {
+  // //   purple.style.backgroundColor ='#cca2ce';
+  // // }, 100);
+
   console.log('clicked');
   console.log(this.id+' '+circleIndex);
   playerSequence.push(this.id);
@@ -63,7 +98,7 @@ function randomCircle() {
 function lightCircle() {
   console.log('lightCircle Started');
   computerSequence.forEach((color, index) => {
-    const time = (index * 1000) + 1500;
+    const time = (index * 1000) + 1200;
     console.log(time);
     setTimeout(() => {
       if(color === 'blue') {
@@ -72,7 +107,7 @@ function lightCircle() {
         setTimeout(() => {
           blue.style.backgroundColor ='#8CBED6';
           audio1.play();
-        }, 500);
+        }, 300);
       }
       if(color === 'grey') {
         grey.style.backgroundColor ='#80808061';
@@ -80,7 +115,7 @@ function lightCircle() {
         setTimeout(() => {
           grey.style.backgroundColor ='#808080';
           audio1.play();
-        }, 500);
+        }, 300);
 
       }
       if(color === 'pink') {
@@ -89,7 +124,7 @@ function lightCircle() {
         setTimeout(() => {
           pink.style.backgroundColor ='#de7075';
           audio1.play();
-        }, 500);
+        }, 300);
       }
       if(color === 'purple') {
         purple.style.backgroundColor ='#cca2ce59';
@@ -97,7 +132,7 @@ function lightCircle() {
         setTimeout(() => {
           purple.style.backgroundColor ='#cca2ce';
           audio1.play();
-        }, 500);
+        }, 300);
       }
     }, time);
   });
