@@ -140,12 +140,6 @@ function compareCircle(){
 }
 const gameOver = document.querySelector('.gameover');
 console.log('gameover is', gameOver);
-// const intro = document.querySelector('.intro');
-// // console.log('this is',button);
-// enter.addEventListener('click', function() {
-//   intro.style.zIndex = -5;
-//   // console.log('this is');
-// });
 // reset game
 function restGame(){
   // alert('🤯 Press start to play again!');

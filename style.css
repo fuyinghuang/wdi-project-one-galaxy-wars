@@ -4,18 +4,27 @@
   background-size: cover;
 }
 
-
 h1{
   text-align: center;
-  font-family: 'Indie Flower', cursive;
-  /* color: #E8712F; */
+  font-family: 'VT323', monospace;
   color: white;
-  font-weight: bold;
-  font-size: 55px;
-  letter-spacing: 9px
+  font-size: 130px;
+  text-shadow: 7px 4px #7b7171;
+  letter-spacing: 20px;
+  animation: fadeIn 3s infinite;
 }
 
-
+@keyframes fadeIn {
+   0% {
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.5;
+   }
+   100% {
+     opacity: 1;
+   }
+}
 
 section {
  height: 100vh;
@@ -23,7 +32,6 @@ section {
  position: fixed;
  /* background-color: black; */
 }
-
 
 .intro {
  z-index: 1;
@@ -41,16 +49,13 @@ section {
  flex-wrap: wrap;
  justify-content: space-around;
  margin: auto;
-
 }
-
 
 .circle {
   border-radius: 250px;
   width: 50%;
   height: 50%;
 }
-
 
 #blue{
   display: block;
@@ -99,6 +104,7 @@ section {
 #yellow {
   display: block;
   margin-top: 75px;
+  margin-right: 50px;
   border-radius: 50%;
   height: 120px;
   width: 120px;
@@ -115,23 +121,20 @@ section {
 
 #red {
   display: block;
-  margin-top: 250px;
+  margin-top: 500px;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 160px;
+  width: 160px;
   background: radial-gradient(circle at 100px 75px, #e85765e3, #000);
   animation-name: spin;
   animation-duration: 4000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-
 #red:hover {
-  height: 90px;
-  width: 90px;
+  height: 170px;
+  width: 170px;
 }
-
-
 
 .buttons{
   position: absolute;
@@ -139,40 +142,76 @@ section {
 
 }
 button {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Averia Libre', cursive;
   border: none;
-  color: #8a8282;
+  color: #d2ad78;
   padding: 8px 10px;
-  font-size: 14px;
+  font-size: 16px;
   margin-top:507px;
   margin-right: 10px;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  background: radial-gradient(circle at 100px 1px, #ef9629f5, #000);
-
-  /* animation-name: spin;
-  animation-duration: 9000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; */
+  border-radius: 30%;
+  height: 50px;
+  width: 60px;
+  background: radial-gradient(circle at 100px 0.5px, #ff9800f7, #000);
 }
 button:hover {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 70px;
 }
 
 p{
   color: white;
   font-size: 40px;
-  margin-top: 500px;
+  margin-top: 400px;
   text-align: center;
   position: relative;
+  font-family: 'Averia Libre', cursive;
+  text-shadow: 7px 4px #7b7171;
+}
+p:hover {
+  font-size: 50px;
+}
+.gameover{
+  color:white;
+  margin: auto;
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+  background: radial-gradient(circle at 100px 75px, #e2d1d245, #00000030);
+  padding: 30px;
+}
+.gameover:hover {
+  height: 700px;
+  width: 700px;
 }
 
-.gameover{
-  background-color: black;
-  color:white;
-  font-size: 60px;
-  width: 200px;
-  height: 200px;
+h2{
+  font-size: 50px;
+  text-align: center;
+  padding: 32px;
+  font-family: 'VT323', monospace;
+  text-shadow: 3px 3px #7b7171;
+  letter-spacing: 14px;
+}
+
+h3{
+  font-size: 35px;
+  text-align: center;
+  padding: 30px;
+  font-family: 'VT323', monospace;
+  text-shadow: 3px 3px #7b7171;
+  letter-spacing: 10px;
+}
+
+h2.instruction{
+  text-align: center;
+  color: #b5b1b1fc;
+  font-size: 28px;
+  line-height: 45px;
+  font-family: 'Averia Libre', cursive;
+  padding: 20px;
+  margin-left: 205px;
+  margin-right: 205px;
+  letter-spacing: 5px;
+  text-shadow: none;
 }
