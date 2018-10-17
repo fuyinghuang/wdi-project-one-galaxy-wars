@@ -1,6 +1,5 @@
 // DOM elements
 // intro page jump to main game
-// const button = document.querySelector('.enter');
 const enter = document.querySelector('.enter');
 const intro = document.querySelector('.intro');
 const game = document.querySelector('.game');
@@ -15,8 +14,10 @@ const green = document.getElementById('green');
 const yellow = document.getElementById('yellow');
 const red = document.getElementById('red');
 const circle = document.getElementsByClassName('circle');
-const audio1 = new Audio('sounds/pling.wav');
-const audio2 = new Audio('sounds/gunshoot.wav');
+// audio
+const audio1 = new Audio('sounds/space.mp3');
+const audio2 = new Audio('sounds/explosion.wav');
+const audio3 = new Audio('sounds/final_explosion.wav');
 
 // global variables
 let round = 1;
@@ -26,7 +27,7 @@ console.log(computerSequence);
 let playerSequence = [];
 
 
-// function
+// functions
 // start the game
 function startButton() {
   console.log('startButton');
@@ -49,8 +50,7 @@ const clickedOn = function() {
 
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('click', clickedOn);
-
-  console.log('circle clicked');
+  // console.log('circle clicked');
 }
 
 
@@ -65,41 +65,41 @@ function randomCircle() {
 function lightCircle() {
   console.log('lightCircle Started');
   computerSequence.forEach((color, index) => {
-    const time = (index * 1000) + 1200;
+    const time = (index * 1000) + 1500;
     console.log(time);
     setTimeout(() => {
       if(color === 'blue') {
-        blue.style.opacity = '0.4';
+        blue.style.opacity = '0.25';
         console.log('blue', blue);
         setTimeout(() => {
           blue.style.opacity = '1';
           audio1.play();
-        }, 300);
+        }, 500);
       }
       if(color === 'green') {
-        green.style.opacity = '0.4';
+        green.style.opacity = '0.25';
         console.log('green', green);
         setTimeout(() => {
           green.style.opacity = '1';
           audio1.play();
-        }, 300);
+        }, 500);
 
       }
       if(color === 'yellow') {
-        yellow.style.opacity = '0.4';
+        yellow.style.opacity = '0.25';
         console.log('yellow', yellow);
         setTimeout(() => {
           yellow.style.opacity = '1';
           audio1.play();
-        }, 300);
+        }, 500);
       }
       if(color === 'red') {
-        red.style.opacity = '0.4';
+        red.style.opacity = '0.25';
         console.log('red', red);
         setTimeout(() => {
           red.style.opacity = '1';
           audio1.play();
-        }, 300);
+        }, 500);
       }
     }, time);
   });
@@ -138,17 +138,20 @@ function compareCircle(){
     restGame();
   }
 }
+
+
 const gameOver = document.querySelector('.gameover');
 console.log('gameover is', gameOver);
+
 // reset game
 function restGame(){
-  // alert('🤯 Press start to play again!');
-  // gameOver.style.zIndex = 10;
+  // move to gameover page
   game.style.zIndex = -1;
+  audio3.play();
   computerSequence = [];
-  console.log('computer',computerSequence);
+  // console.log('computer',computerSequence);
   playerSequence = [];
-  console.log('player',playerSequence);
+  // console.log('player',playerSequence);
   round = 0;
-  console.log('game over',round);
+  // console.log('game over',round);
 }
