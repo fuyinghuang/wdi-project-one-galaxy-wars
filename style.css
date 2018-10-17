@@ -26,6 +26,7 @@ section {
  position: fixed;
  background-image: url("./images/earth.gif");
  background-size: cover;
+ background-color: black;
 }
 
 .intro {
@@ -210,6 +211,7 @@ h2.instruction{
   padding: 20px;
   margin-left: 205px;
   margin-right: 205px;
+  margin-top: 150px; 
   letter-spacing: 5px;
   text-shadow: none;
 }
@@ -226,5 +228,5 @@ h4{
   font-size: 45px;
   color: #f3e14a;
   ext-shadow: 3px 3px #5114bd;
-  margin-top: -30px;
+  margin-top: -40px;
 }
