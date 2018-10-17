@@ -1,18 +1,18 @@
 // DOM elements
 // intro page jump to main game
-const button = document.querySelector('.enter');
+// const button = document.querySelector('.enter');
+const enter = document.querySelector('.enter');
 const intro = document.querySelector('.intro');
 // console.log('this is',button);
-button.addEventListener('click', function() {
+enter.addEventListener('click', function() {
   intro.style.zIndex = -5;
-  console.log('this is');
-  // button = event.target.getAttribute('src');
+  // console.log('this is');
 });
 
 const blue = document.getElementById('blue');
-const grey = document.getElementById('grey');
-const pink = document.getElementById('pink');
-const purple = document.getElementById('purple');
+const green = document.getElementById('green');
+const yellow = document.getElementById('yellow');
+const red = document.getElementById('red');
 const circle = document.getElementsByClassName('circle');
 const audio1 = new Audio('sounds/pling.wav');
 const audio2 = new Audio('sounds/gunshoot.wav');
@@ -32,7 +32,6 @@ function startButton() {
   randomCircle();
   computerGenerate();
   lightCircle();
-  // computerSequence.forEach(color => lightCircle(color));
 }
 
 const clickedOn = function() {
@@ -68,43 +67,35 @@ function lightCircle() {
     console.log(time);
     setTimeout(() => {
       if(color === 'blue') {
-        // blue.style.backgroundColor ='#8cbed647';
-        blue.style.opacity = '0.5';
+        blue.style.opacity = '0.4';
         console.log('blue', blue);
         setTimeout(() => {
-          // blue.style.backgroundColor ='#8CBED6';
           blue.style.opacity = '1';
           audio1.play();
         }, 300);
       }
-      if(color === 'grey') {
-        // grey.style.backgroundColor ='#80808061';
-        grey.style.opacity = '0.5';
-        console.log('grey', grey);
+      if(color === 'green') {
+        green.style.opacity = '0.4';
+        console.log('green', green);
         setTimeout(() => {
-          // grey.style.backgroundColor ='#808080';
-          grey.style.opacity = '1';
+          green.style.opacity = '1';
           audio1.play();
         }, 300);
 
       }
-      if(color === 'pink') {
-        // pink.style.backgroundColor ='#de707561';
-        pink.style.opacity = '0.5';
-        console.log('pink', pink);
+      if(color === 'yellow') {
+        yellow.style.opacity = '0.4';
+        console.log('yellow', yellow);
         setTimeout(() => {
-          // pink.style.backgroundColor ='#de7075';
-          pink.style.opacity = '1';
+          yellow.style.opacity = '1';
           audio1.play();
         }, 300);
       }
-      if(color === 'purple') {
-        // purple.style.backgroundColor ='#cca2ce59';
-        purple.style.opacity = '0.5';
-        console.log('purple', purple);
+      if(color === 'red') {
+        red.style.opacity = '0.4';
+        console.log('red', red);
         setTimeout(() => {
-          // purple.style.backgroundColor ='#cca2ce';
-          purple.style.opacity = '1';
+          red.style.opacity = '1';
           audio1.play();
         }, 300);
       }
@@ -118,13 +109,13 @@ function computerGenerate(){
     computerSequence.push('blue');
   }
   if (circleIndex === 1){
-    computerSequence.push('grey');
+    computerSequence.push('green');
   }
   if (circleIndex === 2){
-    computerSequence.push('pink');
+    computerSequence.push('yellow');
   }
   if (circleIndex === 3){
-    computerSequence.push('purple');
+    computerSequence.push('red');
   }
   console.log(computerSequence);
 }

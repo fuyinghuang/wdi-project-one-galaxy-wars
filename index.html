@@ -2,23 +2,26 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>compareCircle Says</title>
+  <title>Planet Says</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body>
   <section class="intro">
-    <h1>CIRCLE SAYS</h1>
-    <button class="enter">Enter</button>
+    <h1>PLANET SAYS</h1>
+    <p class="enter" onclink>
+      ENTER
+    </p>
+    <!-- <button style="background-color:white;"class="enter" >Enter</button> -->
   </section>
   <section class = "game">
       <div class="circle" id="blue"></div>
-      <div class="circle" id="grey"></div>
-      <div class="circle" id="pink"></div>
-      <div class="circle" id="purple"></div>
+      <div class="circle" id="green"></div>
+      <div class="circle" id="yellow"></div>
+      <div class="circle" id="red"></div>
       <div>
         <button onclick="startButton()">start</button>
-        <button onclick="restGame()">reset</button>    
+        <button onclick="restGame()">reset</button>
       </div>
   </section>
   <script src="script.js" charset="utf-8"></script>

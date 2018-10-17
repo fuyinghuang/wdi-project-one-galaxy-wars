@@ -21,7 +21,7 @@ section {
  height: 100vh;
  width: 100vw;
  position: fixed;
- background-color: black;
+ /* background-color: black; */
 }
 
 
@@ -51,81 +51,111 @@ section {
   height: 50%;
 }
 
-/* .circle:hover {
-  height: 260px;
-  width: 300px; */
-  /* animation: grow 5s infinite */
-  /* transition: all 5s */
 
-/* }
-
-#blue {
+#blue{
   display: block;
   margin: 20px;
-  /* background: black; */
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   background: radial-gradient(circle at 50px 50px, #29abd2ab, #000);
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+
+@keyframes spin {
+      from {
+          transform: rotate(0deg);
+      } to {
+          transform: rotate(360deg);
+      }
+  }
 
 #blue:hover {
+  height: 150px;
+  width: 150px;
+}
+
+#green {
+  display: block;
+  margin-top: 167px;
+  border-radius: 50%;
   height: 200px;
   width: 200px;
-    /* opacity: 0.4; */
-}
-
-#grey{
-  display: block;
-  margin-top: 150px;
-  border-radius: 50%;
-  height: 220px;
-  width: 220px;
   background: radial-gradient(circle at 100px 100px, #6dec89bf, #000);
-}
-/* #grey:hover {
-  height: 250px;
-  width: 260px;
-} */
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 
-#pink {
+}
+#green:hover {
+  height: 210px;
+  width: 210px;
+}
+
+#yellow {
   display: block;
-  margin-top: 100px;
+  margin-top: 75px;
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   background: radial-gradient(circle at 100px 100px, #e6b428f0, #000);
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-/* #pink:hover {
-  height: 250px;
-  width: 250px;
-} */
+#yellow:hover {
+  height: 130px;
+  width: 130px;
+}
 
-#purple {
+#red {
   display: block;
-  margin-top: 300px;
+  margin-top: 250px;
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  background: radial-gradient(circle at 100px 100px, #e85765e3, #000);
-  /* background: radial-gradient(circle at 100px 100px, #a672dee3, #000); */
-}
-#pink:hover {
-  height: 250px;
-  width: 250px;
-  /* animation: up-and-down 5s infinite; */
+  height: 100px;
+  width: 100px;
+  background: radial-gradient(circle at 100px 75px, #e85765e3, #000);
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+#red:hover {
+  height: 90px;
+  width: 90px;
+}
 
 button {
   font-family: 'Space Mono', monospace;
   border: none;
-  background-color: #4c4c4c;
-  color: white;
+  color: #8a8282;
   padding: 8px 10px;
   font-size: 14px;
-  border-radius: 4px;
-  /* cursor: pointer;
-  outline: none; */
-  margin-top:20px;
+  margin-top:507px;
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: radial-gradient(circle at 100px 100px, #c3c2c2e3, #000);
+  /* animation-name: spin;
+  animation-duration: 9000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+}
+button:hover {
+  height: 80px;
+  width: 80px;
+}
+
+p{
+  color: white;
+  font-size: 40px;
+  margin-top: 500px;
+  margin-left: 700PX;
 }
