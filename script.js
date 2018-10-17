@@ -174,7 +174,7 @@ function compareCircle(){
 
 // reset game
 function restGame(){
-  alert('CACA💩. Press start to play again!');
+  alert('🤯 Press start to play again!');
   computerSequence = [];
   console.log('computer',computerSequence);
   playerSequence = [];

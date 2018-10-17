@@ -5,6 +5,7 @@
 
 body{
   /* background-color: #B5E888; */
+  background-color:silver;
 }
 
 h1{
@@ -38,7 +39,7 @@ h1{
 
 }
 .circle:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   /* height: 200px;
   width: 200px; */
 }
@@ -85,6 +86,15 @@ z-index: -1;
   height: 250px;
   width: 250px;
 }
+#grey {
+  display: block;
+  background: black;
+  margin: 0;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  background: radial-gradient(circle at 100px 100px, #808080, #000);
+}
 /* #grey:hover {
   height: 250px;
   width: 250px;
@@ -100,6 +110,15 @@ z-index: -1;
   height: 250px;
   width: 250px;
 }
+#pink {
+  display: block;
+  background: black;
+  margin: 0;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  background: radial-gradient(circle at 100px 100px, #de7075, #000);
+}
 /* #pink:hover {
   height: 250px;
   width: 250px;
@@ -114,6 +133,15 @@ z-index: -1;
   border-radius: 50%;
   height: 250px;
   width: 250px;
+}
+#purple {
+  display: block;
+  background: black;
+  margin: 0;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  background: radial-gradient(circle at 100px 100px, #cca2ce, #000);
 }
 /* #pink:hover {
   height: 250px;
