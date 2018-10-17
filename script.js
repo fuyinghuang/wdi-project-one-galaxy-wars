@@ -3,6 +3,7 @@
 // const button = document.querySelector('.enter');
 const enter = document.querySelector('.enter');
 const intro = document.querySelector('.intro');
+const game = document.querySelector('.game');
 // console.log('this is',button);
 enter.addEventListener('click', function() {
   intro.style.zIndex = -5;
@@ -29,6 +30,7 @@ let playerSequence = [];
 // start the game
 function startButton() {
   console.log('startButton');
+  game.style.zIndex = 0;
   randomCircle();
   computerGenerate();
   lightCircle();
@@ -136,10 +138,19 @@ function compareCircle(){
     restGame();
   }
 }
-
+const gameOver = document.querySelector('.gameover');
+console.log('gameover is', gameOver);
+// const intro = document.querySelector('.intro');
+// // console.log('this is',button);
+// enter.addEventListener('click', function() {
+//   intro.style.zIndex = -5;
+//   // console.log('this is');
+// });
 // reset game
 function restGame(){
-  alert('🤯 Press start to play again!');
+  // alert('🤯 Press start to play again!');
+  // gameOver.style.zIndex = 10;
+  game.style.zIndex = -1;
   computerSequence = [];
   console.log('computer',computerSequence);
   playerSequence = [];

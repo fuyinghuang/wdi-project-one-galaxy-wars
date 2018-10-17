@@ -131,6 +131,13 @@ section {
   width: 90px;
 }
 
+
+
+.buttons{
+  position: absolute;
+  bottom: 170px;
+
+}
 button {
   font-family: 'Space Mono', monospace;
   border: none;
@@ -142,7 +149,8 @@ button {
   border-radius: 50%;
   height: 70px;
   width: 70px;
-  background: radial-gradient(circle at 100px 100px, #c3c2c2e3, #000);
+  background: radial-gradient(circle at 100px 1px, #ef9629f5, #000);
+
   /* animation-name: spin;
   animation-duration: 9000ms;
   animation-iteration-count: infinite;
@@ -157,5 +165,14 @@ p{
   color: white;
   font-size: 40px;
   margin-top: 500px;
-  margin-left: 700PX;
+  text-align: center;
+  position: relative;
+}
+
+.gameover{
+  background-color: black;
+  color:white;
+  font-size: 60px;
+  width: 200px;
+  height: 200px;
 }
