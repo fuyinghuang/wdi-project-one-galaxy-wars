@@ -10,10 +10,10 @@ Galaxy Wars is my first project of Web Development Immersive in General Assembly
 
 ## Landing Page
 
-![](landing_page.gif)
+![](screenshots/landing_page.gif)
 
 ## Play the game
-![](play_game.gif)
+![](screenshots/play_game.gif)
 
 ## Game Over
 ![](screenshots/gameover.png)
