@@ -41,10 +41,10 @@ const clickedOn = function() {
   audio2.pause();
   audio2.currentTime = 0;
   audio2.play();
-  console.log('clicked');
-  console.log(this.id+' '+circleIndex);
+  // console.log('clicked');
+  // console.log(this.id+' '+circleIndex);
   playerSequence.push(this.id);
-  console.log(playerSequence);
+  // console.log(playerSequence);
   compareCircle();
 };
 
@@ -56,9 +56,9 @@ for (let i = 0; i < circle.length; i++) {
 
 // computer generate random number
 function randomCircle() {
-  console.log('randomCircle started');
+  // console.log('randomCircle started');
   circleIndex = Math.floor(Math.random() * 4);
-  console.log(circleIndex);
+  // console.log(circleIndex);
 }
 
 // circle light on
@@ -66,11 +66,11 @@ function lightCircle() {
   console.log('lightCircle Started');
   computerSequence.forEach((color, index) => {
     const time = (index * 1000) + 1200;
-    console.log(time);
+    // console.log(time);
     setTimeout(() => {
       if(color === 'blue') {
         blue.style.opacity = '0.25';
-        console.log('blue', blue);
+        // console.log('blue', blue);
         setTimeout(() => {
           blue.style.opacity = '1';
           audio1.play();
@@ -78,7 +78,7 @@ function lightCircle() {
       }
       if(color === 'green') {
         green.style.opacity = '0.25';
-        console.log('green', green);
+        // console.log('green', green);
         setTimeout(() => {
           green.style.opacity = '1';
           audio1.play();
@@ -87,7 +87,7 @@ function lightCircle() {
       }
       if(color === 'yellow') {
         yellow.style.opacity = '0.25';
-        console.log('yellow', yellow);
+        // console.log('yellow', yellow);
         setTimeout(() => {
           yellow.style.opacity = '1';
           audio1.play();
@@ -95,7 +95,7 @@ function lightCircle() {
       }
       if(color === 'red') {
         red.style.opacity = '0.25';
-        console.log('red', red);
+        // console.log('red', red);
         setTimeout(() => {
           red.style.opacity = '1';
           audio1.play();
@@ -119,7 +119,7 @@ function computerGenerate(){
   if (circleIndex === 3){
     computerSequence.push('red');
   }
-  console.log(computerSequence);
+  // console.log(computerSequence);
 }
 
 // compare computer and player sequence

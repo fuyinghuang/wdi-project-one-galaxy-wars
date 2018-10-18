@@ -9,10 +9,11 @@ Galaxy Wars is memory game based on the concept of "Simon Says". Playing the gam
 Galaxy Wars is my first project of Web Development Immersive in General Assembly. It is my first game built individually with the practice of HTML,CSS and JavaScript.
 
 ## Landing Page
-![](screenshots/landingpage.png)
+
+![](landing_page.gif)
 
 ## Play the game
-![](screenshots/start.png)
+![](play_game.gif)
 
 ## Game Over
 ![](screenshots/gameover.png)
