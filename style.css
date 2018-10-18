@@ -93,8 +93,8 @@ section {
 
 }
 #green:hover {
-  height: 210px;
-  width: 210px;
+  height: 220px;
+  width: 220px;
 }
 
 #yellow {
@@ -111,8 +111,8 @@ section {
   animation-timing-function: linear;
 }
 #yellow:hover {
-  height: 130px;
-  width: 130px;
+  height: 140px;
+  width: 140px;
 }
 
 #red {
@@ -128,8 +128,8 @@ section {
   animation-timing-function: linear;
 }
 #red:hover {
-  height: 170px;
-  width: 170px;
+  height: 180px;
+  width: 180px;
 }
 
 .buttons{

@@ -15,8 +15,8 @@ const yellow = document.getElementById('yellow');
 const red = document.getElementById('red');
 const circle = document.getElementsByClassName('circle');
 // audio
-const audio1 = new Audio('sounds/space.mp3');
-const audio2 = new Audio('sounds/explosion.wav');
+const audio1 = new Audio('sounds/explosion.wav');
+const audio2 = new Audio('sounds/Woosh.wav');
 const audio3 = new Audio('sounds/final_explosion.wav');
 
 // global variables
@@ -65,7 +65,7 @@ function randomCircle() {
 function lightCircle() {
   console.log('lightCircle Started');
   computerSequence.forEach((color, index) => {
-    const time = (index * 1000) + 1500;
+    const time = (index * 1000) + 1200;
     console.log(time);
     setTimeout(() => {
       if(color === 'blue') {
@@ -74,7 +74,7 @@ function lightCircle() {
         setTimeout(() => {
           blue.style.opacity = '1';
           audio1.play();
-        }, 500);
+        }, 300);
       }
       if(color === 'green') {
         green.style.opacity = '0.25';
@@ -82,7 +82,7 @@ function lightCircle() {
         setTimeout(() => {
           green.style.opacity = '1';
           audio1.play();
-        }, 500);
+        }, 300);
 
       }
       if(color === 'yellow') {
@@ -91,7 +91,7 @@ function lightCircle() {
         setTimeout(() => {
           yellow.style.opacity = '1';
           audio1.play();
-        }, 500);
+        }, 300);
       }
       if(color === 'red') {
         red.style.opacity = '0.25';
@@ -99,7 +99,7 @@ function lightCircle() {
         setTimeout(() => {
           red.style.opacity = '1';
           audio1.play();
-        }, 500);
+        }, 300);
       }
     }, time);
   });
