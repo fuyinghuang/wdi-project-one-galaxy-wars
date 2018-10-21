@@ -29,7 +29,58 @@ Galaxy Wars is my first project of Web Development Immersive in General Assembly
 * jQuery
 * Google Fonts
 
+### Functionality
+#### Four circles
+
+I worked on four circles with two buttons at the beginning. Each circle is a div. By assigning each colour a number, randomly generates different amount of number each time with sound and compare the order of the circle clicked buy used.  
+
+![](screenshots/basic_game.png)
 
 ### Featured Piece of Code
+This lets the chosen circle change colour by DOM elements. In order to make the circle lighting one by one, I assign setTimeout function within another function. From app.js
+```
+function lightCircle() {
+  computerSequence.forEach((color, index) => {
+    const time = (index * 1000) + 1200;
+    setTimeout(() => {
+      if(color === 'blue') {
+        blue.style.opacity = '0.25';
+        setTimeout(() => {
+          blue.style.opacity = '1';
+          audio1.play();
+        }, 300);
+      }
+      if(color === 'green') {
+        green.style.opacity = '0.25';
+        setTimeout(() => {
+          green.style.opacity = '1';
+          audio1.play();
+        }, 300);
+      }
+      if(color === 'yellow') {
+        yellow.style.opacity = '0.25';
+        setTimeout(() => {
+          yellow.style.opacity = '1';
+          audio1.play();
+        }, 300);
+      }
+      if(color === 'red') {
+        red.style.opacity = '0.25';
+        setTimeout(() => {
+          red.style.opacity = '1';
+          audio1.play();
+        }, 300);
+      }
+    }, time);
+  });
+}
+```
+### Styling
+Initially, I made four colourful circles for the game and then I switched to the outer space style, with four rotating  plants by using CSS animation. From style.css
 
 ### Future Features
+There are some features I would like to add in the future:
+* Adding more audios, different circles will play different sound when chosen.  
+* Creating a score board to keep tracking number of user clicks.
+* Set different levels, time will decrease each level.
+* Two player mode, so two user can compete with each other.

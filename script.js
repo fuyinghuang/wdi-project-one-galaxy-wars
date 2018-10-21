@@ -128,7 +128,7 @@ function compareCircle(){
     playerSequence = [];
     console.log(computerSequence);
     round++;
-    console.log('round: ' + round);
+    // console.log('round: ' + round);
     randomCircle();
     computerGenerate();
     lightCircle();
