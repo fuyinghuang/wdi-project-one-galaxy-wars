@@ -1,6 +1,6 @@
 # General Assembly WDI Project 1: Galaxy Wars
 
-[GitHub Pages](https://huangfuin1101.github.io/wdi-project-one/)
+[GitHub Pages](https://huangfuin1101.github.io/wdi-project-one-galaxy-wars/)
 
 [GitHub Repo](https://github.com/huangfuin1101/wdi-project-one/tree/gh-pages)
 
