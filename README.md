@@ -30,6 +30,7 @@ Galaxy Wars is my first project of Web Development Immersive in General Assembly
 * Google Fonts
 
 ### Functionality
+
 #### Four circles
 
 I worked on four circles with two buttons at the beginning. Each circle is a div. By assigning each colour a number, randomly generates different amount of number each time with sound and compare the order of the circle clicked buy used.  
@@ -37,8 +38,9 @@ I worked on four circles with two buttons at the beginning. Each circle is a div
 ![](screenshots/basic_game.png)
 
 ### Featured Piece of Code
-This lets the chosen circle change colour by DOM elements. In order to make the circle lighting one by one, I assign setTimeout function within another function. From app.js
-```
+This lets the chosen circle change colour by DOM elements. In order to make the circle lighting one by one, I assign setTimeout function within another setTimeout function. From [script.js](https://github.com/huangfuin1101/wdi-project-one-galaxy-wars/blob/master/script.js).
+
+```JavaScript
 function lightCircle() {
   computerSequence.forEach((color, index) => {
     const time = (index * 1000) + 1200;
@@ -75,6 +77,12 @@ function lightCircle() {
   });
 }
 ```
+
+## Wins and Blockers
+As my first project, I would say a huge win was to build the game and used HTML, CSS and JavaScript I have learned so far. The styling was another big win by using the gif background image of planet, which made the four circles as part of the space.
+
+The biggest block was to let the four circles lighten one after another instead of lighten at the same time, which was quite challenging at the beginning. I couldn't just use setTimeout function which the four circles would still lighten at the same time. 
+
 ### Styling
 Initially, I made four colourful circles for the game and then I switched to the outer space style, with four rotating  plants by using CSS animation. From style.css
 
