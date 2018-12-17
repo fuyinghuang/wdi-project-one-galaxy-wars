@@ -1,8 +1,8 @@
 # General Assembly WDI Project 1: Galaxy Wars
 
-[GitHub Pages](https://huangfuin1101.github.io/wdi-project-one-galaxy-wars/)
+[GitHub Pages](http://fuyinghuang.com/wdi-project-one-galaxy-wars/)
 
-[GitHub Repo](https://github.com/huangfuin1101/wdi-project-one/tree/gh-pages)
+[GitHub Repo](https://github.com/huangfuin1101/wdi-project-one-galaxy-wars/tree/master)
 
 Galaxy Wars is memory game based on the concept of "Simon Says". Playing the game has both fun and the awareness of protecting the living environment.
 
@@ -81,7 +81,7 @@ function lightCircle() {
 ## Wins and Blockers
 As my first project, I would say a huge win was to build the game and used HTML, CSS and JavaScript I have learned so far. The styling was another big win by using the gif background image of planet, which made the four circles as part of the space.
 
-The biggest block was to let the four circles lighten one after another instead of lighten at the same time, which was quite challenging at the beginning. I couldn't just use setTimeout function which the four circles would still lighten at the same time. 
+The biggest block was to let the four circles lighten one after another instead of lighten at the same time, which was quite challenging at the beginning. I couldn't just use setTimeout function which the four circles would still lighten at the same time.
 
 ### Styling
 Initially, I made four colourful circles for the game and then I switched to the outer space style, with four rotating  plants by using CSS animation. From style.css
