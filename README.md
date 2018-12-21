@@ -26,7 +26,6 @@ Galaxy Wars is my first project of Web Development Immersive in General Assembly
 * HTML5 with HTML5 audio
 * CSS3 with animation
 * JavaScript (ECMAScript 6)
-* jQuery
 * Google Fonts
 
 ### Functionality
